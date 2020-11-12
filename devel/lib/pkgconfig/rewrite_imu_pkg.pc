@@ -1,0 +1,8 @@
+prefix=/home/menichea/catkin_ws/src/rewrite_imu_pkg/devel
+
+Name: rewrite_imu_pkg
+Description: Description of rewrite_imu_pkg
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
