@@ -7,8 +7,8 @@ void imuCallback(const sensor_msgs::Imu::ConstPtr& msg, const ros::Publisher pub
 {
   sensor_msgs::Imu new_imu;
   //Update covariance matrices in order to pass the filter
-  new_imu.angular_velocity_covariance = {0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01};
-  new_imu.linear_acceleration_covariance = {0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01};
+  new_imu.angular_velocity_covariance = {0.1, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.1};
+  new_imu.linear_acceleration_covariance = {0.1, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.1};
   //Copy the measurements from the old imu to the new imu message
   new_imu.header = msg->header;
   new_imu.angular_velocity = msg->angular_velocity;
